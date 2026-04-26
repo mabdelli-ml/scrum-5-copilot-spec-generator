@@ -1,0 +1,1 @@
+"""Copilot spec generator package."""

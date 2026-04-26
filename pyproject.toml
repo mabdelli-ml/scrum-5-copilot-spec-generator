@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "copilot-spec-generator"
+version = "0.1.0"
+description = "MVP service to generate structured specs from product briefs"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.111.0",
+  "pydantic>=2.7.0",
+  "uvicorn>=0.30.0"
+]
+
+[project.scripts]
+copilot-spec-generator = "copilot_spec_generator.main:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/copilot_spec_generator"]
