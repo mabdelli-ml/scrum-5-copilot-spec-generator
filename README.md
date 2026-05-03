@@ -33,3 +33,7 @@ curl -X POST http://127.0.0.1:8000/generate-spec \
 ## Ticket traceability
 - Jira: SCRUM-5
 - Source project: Software Team (SCRUM)
+
+## Documentation
+- Full architecture guide: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- Documentation index: [docs/README.md](docs/README.md)
