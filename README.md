@@ -10,12 +10,21 @@ Build a Copilot-style service that generates structured specifications from a pr
 - Return a normalized schema ready for Markdown export.
 - Keep output structure consistent for feature requests and bugfixes.
 
+## Migration status
+- `SCRUM-6`: migrated API layer from FastAPI to Flask.
+
 ## Run
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -e .
-uvicorn copilot_spec_generator.main:app --reload
+copilot-spec-generator
+```
+
+Alternative with Flask CLI:
+```bash
+export FLASK_APP=copilot_spec_generator.main:app
+flask run --host 0.0.0.0 --port 8000
 ```
 
 ## Example request
@@ -32,6 +41,7 @@ curl -X POST http://127.0.0.1:8000/generate-spec \
 
 ## Ticket traceability
 - Jira: SCRUM-5
+- Migration: SCRUM-6
 - Source project: Software Team (SCRUM)
 
 ## Documentation
